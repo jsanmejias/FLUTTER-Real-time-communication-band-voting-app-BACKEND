@@ -1,6 +1,4 @@
 const express = require('express');
-const { ClientRequest } = require('http');
-
 const path = require('path');
 require('dotenv').config();
 
@@ -24,5 +22,5 @@ app.use(express.static(publicPath));
 server.listen(process.env.PORT, ( er) =>{
     if(er)throw new Error(er);
 
-    console.log('Servidor corriendo en puerto!!', process.env.PORT);
+    console.log('Servidor corriendo en puerto', process.env.PORT);
 });
